@@ -1,0 +1,15 @@
+<h4>Edit Comment</h4>
+<%= form_with model: [@article,@comment] do |frm|%>
+
+
+<p><%= frm.label :comments %><br>
+<%= frm.text_field :comments %>
+</p>
+<p><%= frm.label :body %><br>
+<%= frm.text_area :body %>
+</p>
+
+<p>
+	<%= frm.submit %>
+</p>
+<% end %>

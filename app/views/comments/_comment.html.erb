@@ -1,0 +1,18 @@
+<% unless comment.archived? %>
+<h4>Comments</h4>
+
+<% @article.comments.each do |cmt| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= cmt.comments %>
+  </p>
+   <p>
+    <strong>Comment:</strong>
+    <%= cmt.body %>
+  </p>
+  <p>
+    <%= link_to 'edit', edit_article_comment_path(@article,cmt) %>
+  </p>
+
+<% end %>
+<% end %>
