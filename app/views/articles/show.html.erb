@@ -4,7 +4,7 @@
 
 <h3><%= @article.body %> <h3>
 
-	
+
 
 <%= render @article.comments%>
 
@@ -12,9 +12,7 @@
 
 
 <ul>
-	<li>
-		<%= link_to "Edit", edit_comment_path(@article.comment) %>
-		  </li>
+	
 		<li>
 		<%= link_to "Edit", edit_article_path(@article) %>
 		  </li>
@@ -22,5 +20,5 @@
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %></li>
-		
+
 	</ul>
